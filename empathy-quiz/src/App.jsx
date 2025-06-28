@@ -207,7 +207,7 @@ function EmpathyQuizApp() {
     };
 
     const saveToDatabase = async (score, percentage, durationSeconds) => {
-        const { error } = await supabase.from("empathy_results").insert({
+        const { error } = await supabase.from("responses").insert({
             name,
             responses,
             score,
