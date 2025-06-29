@@ -1,12 +1,21 @@
 :root {
+  --sakura-pink: #fbdce2;
+  --sakura-pink-dark: #f5c1cd;
+  --sakura-pink-darker: #e6a2b2;
+  --text-color: #4d2c2c;
+  --button-bg: #e6a2b2;
+  --button-hover: #d88c9a;
+  --link-color: #bb5a76;
+  --link-hover: #a84661;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: var(--sakura-pink);
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,11 +24,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--link-color);
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--link-hover);
 }
 
 body {
@@ -28,26 +37,30 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--sakura-pink);
+  color: var(--text-color);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--text-color);
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-bg);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: var(--button-hover);
 }
 button:focus,
 button:focus-visible {
@@ -56,13 +69,13 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
+    background-color: var(--sakura-pink);
+    color: var(--text-color);
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--button-bg);
+  }
+  a:hover {
+    color: var(--link-hover);
   }
 }
